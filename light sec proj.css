@@ -1,0 +1,162 @@
+html{
+    scroll-behavior:smooth;
+  }
+  body{
+    font-family: Tajawal;
+  }
+ .bg{
+   text-align: center;
+   position: relative;
+   background: none;
+   padding: 30px;
+  }
+  .bg:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    background-image: url(https://images.pexels.com/photos/4062193/pexels-photo-4062193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  .glyphicon{
+    font-size: 40px;
+    color: brown;
+  }
+  .teamimg{
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+  }
+  .fa{
+    font-size: 15px;
+    background-color: brown;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding-top: 5px;
+  }
+  .colorpalette{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width:767px){
+    .colorpalette{
+      max-width: 100%;
+      width: 400px;
+      height: 100px;
+    }
+  }
+  .portfoilo .portfoilo-item{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    max-width: 350px;
+    height: 300px;
+    border-radius: 2%;
+    overflow: hidden;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+    margin-bottom: 30px;
+  }
+  .img-fluid{
+    object-fit: cover;
+    min-width: 350px;
+    height: 300px;
+  }
+  .portfoilo .portfoilo-item .portfoilo-item-caption{
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: all 0.2s ease-in-out;
+   opacity: 0;
+   background-color: #882D18; 
+
+  }
+  .portfoilo .portfoilo-item .portfoilo-item-caption:hover{
+    opacity: 0.8;
+  }
+  .portfoilo .portfoilo-item .portfoilo-item-caption .portfoilo-item-caption-content{
+    font-size:25px ;
+    padding: 110px;
+  }
+  #pricetable{
+    background-color: none;
+
+  }
+  .pricecontent{
+    background-color: white;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+  }
+  .headprice{
+    background-color:#fff7ee;
+  }
+  .headprice:hover{
+    background-color:#E8C195;
+  }
+  .head span{
+    color:#3E200A;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .featurelist ul{
+    width: 100%;
+  }
+  .featurelist ul li{
+    color: #a7a7a7;
+    margin: 0 35px;
+    padding: 20px 15px;
+    width: 100%;
+  }
+  .featurelist ul li span{
+    color: #414141;
+  }
+  .featurelist ul:hover{
+    background-color:#E8D198;
+  }
+  .price{
+    color: #3E200A;
+    font-size: 30px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+  }
+  .featurelist{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .darkfooter{
+    color: #f0f9ff;
+    background-color:#5a3a42;
+  }
+  .darkfooter h4{
+    font-weight: 500;
+  }
+  .darkfooter ul{
+    list-style: none;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+  .darkfooter ul li{
+    opacity: 0.6;
+  }
+  .darkfooter p{
+    opacity: 0.6;
+  }
+  .social{
+    margin: 30px;
+  }
+  #serves{
+    background-color: whitesmoke;
+  }
+  #portfoilo{
+    background-color: #E8C195 ; 
+  }

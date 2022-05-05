@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second project</title>
+    <style>
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link id="mystyle" rel="stylesheet" type="text/css" href="dark sec proj.css">
+    <link id="mystyle" rel="stylesheet" type="text/css" href="light sec proj.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+     <script>
+       var setTheme = localStorage.getItem('theme')
+       console.log('theme',setTheme)
+
+       if (setTheme == null){
+         swapStyle('light sec proj.css')
+       }else{
+         swapStyle(setTheme)
+       }
+
+       function swapStyle(sheet){
+         document.getElementById('mystyle').href =sheet
+         localStorage.setItem('theme',sheet)
+       }
+     </script>
+    <style>
+      html{
+        scroll-behavior:smooth;
+      }
+      body{
+        font-family: Tajawal;
+      }
+     .bg{
+       text-align: center;
+       position: relative;
+       background: none;
+       padding: 30px;
+      }
+      .bg:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        background-image: url(https://images.pexels.com/photos/4062193/pexels-photo-4062193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        z-index: -1;
+      }
+      .glyphicon{
+        font-size: 40px;
+        color: brown;
+      }
+      .teamimg{
+        border-radius: 50%;
+        border: 5px solid white;
+        box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+      }
+      .fa{
+        font-size: 15px;
+        background-color: brown;
+        color: white;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        padding-top: 5px;
+      }
+      .colorpalette{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width:767px){
+        .colorpalette{
+          max-width: 100%;
+          width: 400px;
+          height: 100px;
+        }
+      }
+      .portfoilo .portfoilo-item{
+        cursor: pointer;
+        position: relative;
+        display: block;
+        max-width: 350px;
+        height: 300px;
+        border-radius: 2%;
+        overflow: hidden;
+        box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+        margin-bottom: 30px;
+      }
+      .img-fluid{
+        object-fit: cover;
+        min-width: 350px;
+        height: 300px;
+      }
+      .portfoilo .portfoilo-item .portfoilo-item-caption{
+       position: absolute;
+       top: 0;
+       left: 0;
+       transition: all 0.2s ease-in-out;
+       opacity: 0;
+       background-color: #882D18; 
+
+      }
+      .portfoilo .portfoilo-item .portfoilo-item-caption:hover{
+        opacity: 0.8;
+      }
+      .portfoilo .portfoilo-item .portfoilo-item-caption .portfoilo-item-caption-content{
+        font-size:25px ;
+        padding: 110px;
+      }
+      #pricetable{
+        background-color: none;
+
+      }
+      .pricecontent{
+        background-color: white;
+        box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+      }
+      .headprice{
+        background-color:#fff7ee;
+      }
+      .headprice:hover{
+        background-color:#E8C195;
+      }
+      .head span{
+        color:#3E200A;
+        font-size: 17px;
+        font-weight: 500;
+      }
+      .featurelist ul{
+        width: 100%;
+      }
+      .featurelist ul li{
+        color: #a7a7a7;
+        margin: 0 35px;
+        padding: 20px 15px;
+        width: 100%;
+      }
+      .featurelist ul li span{
+        color: #414141;
+      }
+      .featurelist ul:hover{
+        background-color:#E8D198;
+      }
+      .price{
+        color: #3E200A;
+        font-size: 30px;
+        font-weight: 500;
+        display: block;
+        text-align: center;
+      }
+      .featurelist{
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      .darkfooter{
+        color: #f0f9ff;
+        background-color:#5a3a42;
+      }
+      .darkfooter h4{
+        font-weight: 500;
+      }
+      .darkfooter ul{
+        list-style: none;
+        line-height: 1.6;
+        font-size: 15px;
+      }
+      .darkfooter ul li{
+        opacity: 0.6;
+      }
+      .darkfooter p{
+        opacity: 0.6;
+      }
+      .social{
+        margin: 30px;
+      }
+      .dark{
+        background-color: black;
+        color: white;
+      }
+      #serves{
+        background-color: whitesmoke;
+      }
+      #portfoilo{
+       background-color: #E8C195; 
+      }
+
+
+
+
+
+    </style>
+
+   
+  <div class="container">
+   <nav class="navbar navbar-expand-sm navbar-light">
+       <a calss="navbar-brand" href="#">
+         <img src="https://logodix.com/logo/1931272.png" alt="bootstrap" width="30" height="30" class="d-inline-block align-top">
+       </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+         data-bs-target="#toggleMobileMenu"
+         aria-controls="toggleMobileMenu" 
+         aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+         <div class="collapse navbar-collapse" id="toggleMobileMenu">
+       <ul class ="navbar-nav ms-auto text-center">
+         <li>
+         <a class="nav-link" href="#">الرئيسية</a>
+          </li>
+         <li>
+         <a class="nav-link" href="#team">فريق العمل</a>
+         </li>
+         <li>
+          <a class="nav-link" href="#about">تعرف علينا</a>
+          </li>
+         <li>
+         <a class="nav-link" href="#portfoilo">معرض الاعمال</a>
+         </li> 
+       </ul>
+     </div>
+       <a onclick="swapStyle('dark sec proj.css')" style="color: rgb(36,41,46);font-size: 20px ;" class="fa fa-moon-o"></a>
+       <a onclick="swapStyle('light sec proj.css')" style=" font-size: 20px ;" class="fa fa-sun-o" ></a>  
+      <a class="btn btn-danger" href="second project 2.0.html">تسجيل الدخول</a>
+    </nav>
+  </div>
+
+
+  <div class="bg pt-6">
+   <h1>اهلا بك</h1>
+   <p>الفقرات الخاصة بالموقع</p>
+   <a class="btn btn-danger" href="#" role="button">تصفح منتجاتنا</a>
+  </div>
+
+ <div id="serves" >
+  <div class="container">
+    <div class="text-center my-5">
+      <h2>ماذا توفر خدماتنا</h2>
+      <p style="padding-bottom: 20px;">اااااوووووهههههااااااااااااااااااييييييييييييييييي</p>
+     <div class="row">
+       <div class="col-md-4">
+          <i class="glyphicon glyphicon-flash"></i>
+          <h3>سرعة التنفيذ</h3>
+          <p>شرح الخدمة</p>
+       </div> 
+       <div class="col-md-4">
+         <i class="glyphicon glyphicon-flash"></i>
+         <h3>سرعة التنفيذ</h3>
+         <p>شرح الخدمة</p>
+       </div> 
+       <div class="col-md-4">
+         <i class="glyphicon glyphicon-flash"></i>
+         <h3>سرعة التنفيذ</h3>
+         <p>شرح الخدمة</p>
+       </div> 
+     </div>
+   </div>
+  </div>
+ </div>
+ 
+  <div id="team" class="container">
+    <div class="text-center my-5">
+      <h2>فريق العمل</h2>
+      <p style="padding-bottom: 20px;">اااااوووووهههههااااااااااااااااااييييييييييييييييي</p>
+     <div class="row">
+       <div class="col-md-4">
+          <img class="teamimg" src="https://www.svgrepo.com/show/169986/avatar.svg" width="80" height="80">
+          <h3>فاطمة</h3>
+          <p>شرح الخدمة</p>
+          <div class="social">
+            <a href="#" class="fa fa-facebook"></a> 
+            <a href="#" class="fa fa-linkedin"></a> 
+          </div>
+       </div> 
+       <div class="col-md-4">
+         <img class="teamimg" src="https://www.svgrepo.com/show/169986/avatar.svg" width="80" height="80">
+         <h3>محمد</h3>
+         <p>شرح الخدمة</p>
+         <div class="social">
+           <a href="#" class="fa fa-facebook"></a> 
+           <a href="#" class="fa fa-linkedin"></a> 
+         </div>
+       </div> 
+       <div class="col-md-4">
+         <img class="teamimg" src="https://www.svgrepo.com/show/169986/avatar.svg" width="80" height="80">
+         <h3>صادق</h3>
+         <p>شرح الخدمة</p>
+         <div class="social">
+           <a href="#" class="fa fa-facebook"></a> 
+           <a href="#" class="fa fa-linkedin"></a> 
+         </div>
+       </div> 
+     </div>
+   </div>
+  </div>
+  
+
+  <div id="about" style="background-color: #f7f7f7;">
+   <div class="container text-center">
+     <div class="row">
+        <div class="col-md-6">
+          <img style="max-height: 300px;" src="https://www.kindpng.com/picc/m/789-7895082_online-learning-illustration-png-transparent-png.png">
+        </div>
+        <div class="col-md-6">
+          <h2 style="padding-top: 30px;">من نحن</h2>
+          <p style="padding-top:20px; padding-bottom: 20px;">وراء كل علامة تجارية قصة مثيرة للاهتمام، يُحبّ الآخرون سماعها وخاصة العملاء، استخدام الفن القصصي في كتابة صفحة “من نحن” هملايين الدولارات سنويا لاختلاق قصص إعلانية تلهم المستهلكين</p>
+          <a class="btn btn-danger" href="#">معرض الاعمال</a> 
+          <div style="padding-top: 20px;" class="social">
+            <a href="#" class="fa fa-facebook"></a> 
+            <a href="#" class="fa fa-linkedin"></a> 
+            <a href="#" class="fa fa-facebook"></a> 
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="container text-center">
+    <h2 style="padding-bottom:20px;">الوان الموقع</h2>
+    <div class="row">
+      <div class="col-md-2">
+        <div style="background-color: #A4591D;" class="colorpalette card shadow">
+         <h4>#A4591D</h4>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div style="background-color: #3E200A;" class="colorpalette card shadow">
+         <h4 style="color:white">#3E200A</h4>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div style="background-color: #882D18;" class="colorpalette card shadow">
+         <h4 style="color:white">#882D18</h4>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div style="background-color: #E7BD43;" class="colorpalette card shadow">
+         <h4>#E7BD43</h4>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div style="background-color: #FDE0C1;" class="colorpalette card shadow">
+         <h4>#FDE0C1</h4>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div style="background-color: #E8C195;" class="colorpalette card shadow">
+         <h4>#E8C195</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div id="portfoilo"  class="portfoilo">
+    <div class="container">
+      <h2 class="text-center" style="padding-bottom: 20px;">معرض الاعمال</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="portfoilo-item">
+            <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+              <div class="portfoilo-item-caption-content text-center text-white">
+                <i class="fa fa-plus"></i>
+                <h4>عنوان الصورة</h4>
+              </div>
+            </div>
+            <img class="img-fluid" src="https://images.pexels.com/photos/9718307/pexels-photo-9718307.jpeg" >
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfoilo-item">
+            <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+              <div class="portfoilo-item-caption-content text-center text-white">
+                <i class="fa fa-plus"></i>
+                <h4>عنوان الصورة</h4>
+              </div>
+            </div>
+            <img class="img-fluid" src="https://images.pexels.com/photos/9718307/pexels-photo-9718307.jpeg" >
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfoilo-item">
+            <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+              <div class="portfoilo-item-caption-content text-center text-white">
+                <i class="fa fa-plus"></i>
+                <h4>عنوان الصورة</h4>
+              </div>
+            </div>
+            <img class="img-fluid" src="https://images.pexels.com/photos/9718307/pexels-photo-9718307.jpeg" >
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfoilo-item">
+            <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+              <div class="portfoilo-item-caption-content text-center text-white">
+                <i class="fa fa-plus"></i>
+                <h4>عنوان الصورة</h4>
+              </div>
+            </div>
+            <img class="img-fluid" src="https://images.pexels.com/photos/9718307/pexels-photo-9718307.jpeg" >
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfoilo-item">
+            <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+              <div class="portfoilo-item-caption-content text-center text-white">
+                <i class="fa fa-plus"></i>
+                <h4>عنوان الصورة</h4>
+              </div>
+            </div>
+            <img class="img-fluid" src="https://images.pexels.com/photos/9718307/pexels-photo-9718307.jpeg" >
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfoilo-item">
+            <div class="portfoilo-item-caption align:item-center justify-content-center h-100 w-100">
+              <div class="portfoilo-item-caption-content text-center text-white">
+                <i class="fa fa-plus"></i>
+                <h4>عنوان الصورة</h4>
+              </div>
+            </div>
+            <img class="img-fluid" src="https://images.pexels.com/photos/9718307/pexels-photo-9718307.jpeg" >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div id="pricetable" style="margin-bottom: 30px;">
+    <div class="container text-center">
+      <h2>قائمة الاسعار</h2>
+      <div class="row">
+        <div class="col-md-4  pricecard">
+          <div class="pricecontent">
+            <div class="headprice">
+              <div class="headcontent">
+                <div class="headbg"></div>
+                <div class="head">
+                  <span>الاساسي</span>
+                </div>
+              </div>
+              <div class="pricetag">
+                <span class="price">
+                  <span class="sign">$</span>
+                  <span class="currency">45</span>
+                  <span class="cent">.99</span>
+                  <span class="month">\للشهر</span>
+                </span>
+              </div> 
+            </div>
+            <div class="featurelist">
+              <ul>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+              </ul>
+            </div>
+            <a class="btn btn-danger" href="#" style="margin-bottom: 10px;">اشتري الان</a>
+          </div>
+        </div>
+        <div class="col-md-4  pricecard">
+          <div class="pricecontent">
+            <div class="headprice">
+              <div class="headcontent">
+                <div class="headbg"></div>
+                <div class="head">
+                  <span>الاساسي</span>
+                </div>
+              </div>
+              <div class="pricetag ">
+                <span class="price">
+                  <span class="sign">$</span>
+                  <span class="currency">45</span>
+                  <span class="cent">.99</span>
+                  <span class="month">\للشهر</span>
+                </span>
+              </div> 
+            </div>
+            <div class="featurelist">
+              <ul>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+              </ul>
+            </div>
+            <a class="btn btn-danger" href="#" style="margin-bottom: 10px;">اشتري الان</a>
+          </div>
+        </div>
+        <div class="col-md-4  pricecard">
+          <div class="pricecontent">
+            <div class="headprice">
+              <div class="headcontent">
+                <div class="headbg"></div>
+                <div class="head">
+                  <span>الاساسي</span>
+                </div>
+              </div>
+              <div class="pricetag ">
+                <span class="price">
+                  <span class="sign">$</span>
+                  <span class="currency">45</span>
+                  <span class="cent">.99</span>
+                  <span class="month">\للشهر</span>
+                </span>
+              </div> 
+            </div>
+            <div class="featurelist ">
+              <ul>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+                <li><span>2GB</span>النطاق</li>
+              </ul>
+            </div>
+            <a class="btn btn-danger " href="#" style="margin-bottom: 10px;">اشتري الان</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="darkfooter" style="margin-top: 40px;">
+    <footer>
+      <div class="container text-right" >
+        <div class="row" style="margin-top: 2 0px;">
+          <div class="col-md-3">
+            <h4>خدماتنا</h4>
+            <ul>
+              <li>تصميم</li>
+              <li>تصميم</li>
+              <li>تصميم</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>مواقعنا</h4>
+            <ul>
+              <li>تصميم</li>
+              <li>تصميم</li>
+              <li>تصميم</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4>من نحن</h4>
+            <p>اااااوووووهههههااااااااااااااااااييييييييييييييييي</p>
+          </div>
+        </div>
+        <div class="col social text-center" >
+           <a href="#" class="fa fa-facebook"></a> 
+            <a href="#" class="fa fa-linkedin"></a> 
+            <a href="#" class="fa fa-facebook"></a> 
+            <a href="#" class="fa fa-linkedin"></a>
+            <p class="copuright text-center" style="margin-top: 10px;">جميع الحقوق محفوضة</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
+ 
+
+
+
